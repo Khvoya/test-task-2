@@ -1,0 +1,24 @@
+{
+  "name": "test-task-2",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "npx playwright test",
+    "prettier": "npx prettier . --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khvoya/test-task-2.git"
+  },
+  "author": "Khvoya",
+  "license": "ISC",
+  "homepage": "https://github.com/Khvoya/test-task-2#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^8.1.0",
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.6",
+    "playwright": "1.39.0",
+    "prettier": "3.0.3",
+    "typescript": "5.2.2"
+  }
+}
