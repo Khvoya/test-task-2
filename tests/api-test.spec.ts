@@ -3,12 +3,13 @@ import test from "../fixtures/allFixtures";
 import { userResponseType } from "../src/api/types";
 
 test("Проверка GET /Account/v1/User/", async ({
+  createUserAPIData,
+  createUserByApi,
   authorizeUserByApi,
   bookstoreAPI,
-  createUserAPIData,
 }) => {
   let getUserResponse: { json: userResponseType; status: number };
-  const userId = authorizeUserByApi.userId;
+  const userId = createUserByApi.userID;
 
   await test.step(`Получаем ответ по GET для пользователя ${createUserAPIData.userName}`, async () => {
     getUserResponse = await bookstoreAPI.getUser(userId);

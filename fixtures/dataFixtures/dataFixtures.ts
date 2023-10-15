@@ -7,7 +7,8 @@ export const dataFixtures = baseFixtures.extend<{
   createUserAPIData: async ({}, use) => {
     const output = {
       userName: faker.internet.userName(),
-      password: `${faker.internet.password()}*`,
+      // faker не всегда добавляет цифру и символ в пароль
+      password: `${faker.internet.password()}*1`,
     };
     await use(output);
   },
